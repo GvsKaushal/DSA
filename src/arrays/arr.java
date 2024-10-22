@@ -8,7 +8,7 @@ public class arr {
 
         Scanner sc = new Scanner(System.in);
 
-        customArray array = null;
+        customArray array;
         int capacity=0;
         boolean validInput = false;
 
