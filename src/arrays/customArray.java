@@ -101,14 +101,14 @@ public class customArray {
 
     }
 
-    public void Display(){
+    public void Display() {
         System.out.println("------------------------------------------------------");
         System.out.print("Array : ");
-        for (int i =0 ;i<size;i++){
-            System.out.print(arr[i]+" ");
+        for (int i = 0; i < size; i++) {
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
-        System.out.println("size = "+size+" length = "+arr.length);
+        System.out.println("size = " + size + " length = " + arr.length);
         System.out.println("------------------------------------------------------");
     }
 

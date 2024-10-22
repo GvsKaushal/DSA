@@ -9,7 +9,7 @@ public class arr {
         Scanner sc = new Scanner(System.in);
 
         customArray array;
-        int capacity=0;
+        int capacity = 0;
         boolean validInput = false;
 
         while (!validInput) {
@@ -35,7 +35,7 @@ public class arr {
             System.out.println("8.Exit");
 
 
-            int choice=0;
+            int choice = 0;
             boolean validInput1 = false;
 
             while (!validInput1) {
@@ -49,11 +49,11 @@ public class arr {
                 }
             }
 
-            switch (choice){
+            switch (choice) {
                 case 1:
                     try {
                         System.out.print("Enter a number to insert : ");
-                        int value= sc.nextInt();
+                        int value = sc.nextInt();
                         array.insertAtEnd(value);
                         array.Display();
                     } catch (Exception e) {
@@ -64,7 +64,7 @@ public class arr {
                 case 2:
                     try {
                         System.out.print("Enter a number to insert : ");
-                        int value= sc.nextInt();
+                        int value = sc.nextInt();
                         array.insertAtFront(value);
                         array.Display();
                     } catch (Exception e) {
@@ -75,10 +75,10 @@ public class arr {
                 case 3:
                     try {
                         System.out.print("Enter a number to insert : ");
-                        int value= sc.nextInt();
+                        int value = sc.nextInt();
                         System.out.print("Enter Index position : ");
-                        int position= sc.nextInt();
-                        array.insertAtPosition(value,position);
+                        int position = sc.nextInt();
+                        array.insertAtPosition(value, position);
                         array.Display();
                     } catch (Exception e) {
                         System.out.println("Enter only numbers");
@@ -96,7 +96,7 @@ public class arr {
                 case 6:
                     try {
                         System.out.print("Enter Index position : ");
-                        int position= sc.nextInt();
+                        int position = sc.nextInt();
                         array.deleteAtPosition(position);
                         array.Display();
                     } catch (Exception e) {
