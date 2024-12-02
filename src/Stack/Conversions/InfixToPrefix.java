@@ -1,4 +1,4 @@
-package Stack;
+package Stack.Conversions;
 
 import java.util.HashMap;
 import java.util.Stack;
