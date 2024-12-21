@@ -2,10 +2,14 @@ package Stack.StackUsingArray;
 
 public class stackArray {
 
-    int size = 10;
-    int[] stack = new int[size];
-    int top = -1;
+    private int size;
+    private int[] stack = new int[size];
+    private int top = -1;
     private int length = 0;
+
+    stackArray(int size) {
+        this.size = size;
+    }
 
 
     public void push(int data) {
@@ -55,7 +59,6 @@ public class stackArray {
     }
 
     public void getLength() {
-
         System.out.println("stack size = " + length);
     }
 

@@ -41,7 +41,6 @@ public class PostfixToInfix {
                     stack.push(String.valueOf(stringBuilder));
                     stringBuilder.setLength(0);
                 }
-
             }
         }
 

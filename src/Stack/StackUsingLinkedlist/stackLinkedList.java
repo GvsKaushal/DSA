@@ -28,6 +28,9 @@ public class stackLinkedList {
             top = top.next;
             temp.next = null;
             length--;
+            if (length == 0) {
+                temp = null;
+            }
         }
 
     }

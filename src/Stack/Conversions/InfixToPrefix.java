@@ -7,7 +7,7 @@ public class InfixToPrefix {
 
     public static void main(String[] args) {
 
-        String string = "x+y*z/w+u";
+        String string = "(A–B/C)*(A/K-L)";
         String result = InfixToPrefixConversion(string);
         System.out.println(string);
         System.out.println(result);
@@ -16,14 +16,15 @@ public class InfixToPrefix {
 
     private static String InfixToPrefixConversion(String s) {
 
+
         s = reverse(s);
 
-        int i = 0;
         int len = s.length();
         StringBuilder stringBuilder = new StringBuilder();
         Stack<Character> stack = new Stack<>();
 
-        while (i < len) {
+
+        for (int i = 0; i < len; i++) {
 
             if (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z' ||
                     s.charAt(i) >= 'a' && s.charAt(i) <= 'z' ||
@@ -61,8 +62,6 @@ public class InfixToPrefix {
 
                 stack.push(s.charAt(i));
             }
-
-            i++;
         }
 
         while (!stack.isEmpty()) {
@@ -93,9 +92,21 @@ public class InfixToPrefix {
 
     private static String reverse(String s) {
 
-        StringBuilder stringBuilder = new StringBuilder(s);
-        stringBuilder.reverse();
+        StringBuilder reversedInput = new StringBuilder();
+        int len = s.length();
 
-        return String.valueOf(stringBuilder);
+        for (int i = len - 1; i >= 0; i--) {
+            char c = s.charAt(i);
+            if (c == '(') {
+                reversedInput.append(')');
+            } else if (c == ')') {
+                reversedInput.append('(');
+            } else {
+                reversedInput.append(c);
+            }
+        }
+
+        return String.valueOf(reversedInput);
     }
+
 }

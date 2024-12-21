@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class sta {
     public static void main(String[] args) {
 
-        stackArray s = new stackArray();
+        stackArray s = new stackArray(10);
 
         Scanner sc = new Scanner(System.in);
 
@@ -16,10 +16,8 @@ public class sta {
             System.out.println("4.show");
             System.out.println("5.Exit");
 
-
             System.out.print("Enter you choice = ");
             int choice = sc.nextInt();
-
 
             switch (choice) {
                 case 1:
