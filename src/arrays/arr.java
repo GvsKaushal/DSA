@@ -7,8 +7,7 @@ public class arr {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter size of array");
-        int capacity = 0;
+        int capacity = 4;
         customArray array = new customArray(capacity);
 
 

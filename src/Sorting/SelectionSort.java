@@ -18,15 +18,17 @@ public class SelectionSort {
 
         int n = array.length;
 
-
         for (int i = 0; i < n; i++) {
             int minIndex = i;
             for (int j = i + 1; j < n; j++) {
-                if (array[minIndex] > array[j]) {
+                if (array[j] < array[minIndex]) {
                     minIndex = j;
                 }
             }
-            swap(array, minIndex, i);
+
+            if (minIndex != i) {
+                swap(array, minIndex, i);
+            }
         }
     }
 

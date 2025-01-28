@@ -18,7 +18,6 @@ public class InsertionSort {
 
         int n = array.length;
 
-
         for (int i = 1; i < n; i++) {
 
             int temp = array[i];
@@ -26,9 +25,10 @@ public class InsertionSort {
 
             while (j >= 0 && temp < array[j]) {
                 array[j + 1] = array[j];
-                array[j] = temp;
                 j--;
             }
+
+            array[j + 1] = temp;
         }
     }
 

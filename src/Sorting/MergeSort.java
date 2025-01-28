@@ -10,22 +10,19 @@ public class MergeSort {
 
         System.out.println(Arrays.toString(array));
 
-        int[] result = Msort(array);
+        int[] result = Msort(array, 0, array.length - 1);
 
         System.out.println(Arrays.toString(result));
     }
 
-    private static int[] Msort(int[] array) {
+    private static int[] Msort(int[] array, int left, int right) {
 
-        if (array.length == 1) return array;
+        if (left == right) return new int[]{array[left]};
 
-        int left = 0;
-        int right = array.length;
+        int mid = left + (right - left) / 2;
 
-        int mid = (left + right) / 2;
-
-        int[] leftArray = Msort(Arrays.copyOfRange(array, left, mid));
-        int[] rightArray = Msort(Arrays.copyOfRange(array, mid, right));
+        int[] leftArray = Msort(array, left, mid);
+        int[] rightArray = Msort(array, mid + 1, right);
 
         return merge(leftArray, rightArray);
 

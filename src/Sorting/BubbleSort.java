@@ -6,7 +6,7 @@ public class BubbleSort {
 
     public static void main(String[] args) {
 
-        int[] array = {4, 2, 6, 5, 1, 3};
+        int[] array = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(array));
 
         Bsort(array);
@@ -20,10 +20,15 @@ public class BubbleSort {
         int n = array.length;
 
         for (int i = n - 1; i > 0; i--) {
+            boolean swapped = false;
             for (int j = 0; j < i; j++) {
                 if (array[j] > array[j + 1]) {
                     swap(array, j, j + 1);
+                    swapped = true;
                 }
+            }
+            if (!swapped) {
+                break;
             }
         }
     }

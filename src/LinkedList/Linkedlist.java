@@ -89,6 +89,7 @@ public class Linkedlist {
         Node temp = Get(index);
         if (temp != null) {
             temp.value = val;
+            return true;
         }
         return false;
     }
