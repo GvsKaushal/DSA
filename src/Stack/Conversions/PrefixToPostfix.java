@@ -33,7 +33,7 @@ public class PrefixToPostfix {
 
                     stringBuilder.append(firstPop);
                     stringBuilder.append(secondPop);
-                    stringBuilder.append(s.substring(i, i + 1));
+                    stringBuilder.append(s.charAt(i));
 
                     stack.push(String.valueOf(stringBuilder));
                     stringBuilder.setLength(0);
@@ -42,8 +42,6 @@ public class PrefixToPostfix {
             }
         }
 
-        String result = stack.pop();
-
-        return result;
+        return stack.pop();
     }
 }

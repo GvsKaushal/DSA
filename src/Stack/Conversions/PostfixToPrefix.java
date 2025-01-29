@@ -31,7 +31,7 @@ public class PostfixToPrefix {
                     String firstPop = stack.pop();
                     String secondPop = stack.pop();
 
-                    stringBuilder.append(s.substring(i, i + 1));
+                    stringBuilder.append(s.charAt(i));
                     stringBuilder.append(secondPop);
                     stringBuilder.append(firstPop);
 
@@ -42,8 +42,6 @@ public class PostfixToPrefix {
             }
         }
 
-        String result = stack.pop();
-
-        return result;
+        return stack.pop();
     }
 }

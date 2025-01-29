@@ -34,7 +34,7 @@ public class PostfixToInfix {
 
                     stringBuilder.append("(");
                     stringBuilder.append(secondPop);
-                    stringBuilder.append(s.substring(i, i + 1));
+                    stringBuilder.append(s.charAt(i));
                     stringBuilder.append(firstPop);
                     stringBuilder.append(")");
 
@@ -44,8 +44,6 @@ public class PostfixToInfix {
             }
         }
 
-        String result = stack.pop();
-
-        return result;
+        return stack.pop();
     }
 }

@@ -33,7 +33,7 @@ public class PrefixToInfix {
 
                     stringBuilder.append("(");
                     stringBuilder.append(firstPop);
-                    stringBuilder.append(s.substring(i, i + 1));
+                    stringBuilder.append(s.charAt(i));
                     stringBuilder.append(secondPop);
                     stringBuilder.append(")");
 
@@ -44,8 +44,6 @@ public class PrefixToInfix {
             }
         }
 
-        String result = stack.pop();
-
-        return result;
+        return stack.pop();
     }
 }
